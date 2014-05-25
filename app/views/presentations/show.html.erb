@@ -1,0 +1,106 @@
+
+<!--------------header--------------->
+<div class="jumbotron header_bar" align="center">
+  <div class="container">
+    <h1></h1>
+  </div>
+</div>
+<div class="jumbotron" align="center">
+  <div>
+    <h1>
+
+       <%= image_tag("testimonial.jpg",:size=>"1500x1000") %>
+    </h1>
+  </div>
+</div>
+<!--------------/header--------------->
+<div class="jumbotron socialbar">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 social">
+        <ul>
+
+          <li><%= image_tag("fb.png" ,:size => "30x30")%></li>
+          <li><%= image_tag("twitter.png" ,:size => "30x30")%></li>
+          <li><%= image_tag("blog.png" ,:size => "30x30")%></li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="jumbotron">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9">
+        <h1 class="testi_h1"><%= @presentation.title%></h1>
+        <div class="col-md-12">
+          <ul class="bxslider">
+            <% @feedbacks.each do |feedback| %>
+            <li>
+              <div class="people_img"><%= image_tag( feedback.logo.url ,:size => "200x200")%></div>
+              <div class="people_talk"><p><%= image_tag("icon1.png", :width => 30, :height => 30)%>&nbsp;&nbsp;&nbsp; <%= feedback.message %> <%= image_tag("icon2.png", :width => 30, :height => 30 ,:class =>"icon2")%> </p>
+                <h2><%= feedback.client_name %></h2>
+              </div>
+            </li>
+
+            <% end %>
+
+          </ul>
+
+
+          <div id="bx-pager" style="text-align:center;">
+            <% @feedbacks.each_with_index do |feedback,index| %>
+            <a data-slide-index=<%= index %> href=""> <%= image_tag (feedback.logo.url) %></a>
+
+          <% end %>
+          </div>
+
+        </div>
+        <div class="col-md-12">
+         <h1 class="testi_h1 client_speak">Clients Speaks</h1>
+          <div class="col-md-6"  style="margin-top: 50px;">
+          <iframe width="100%" height="215" src="http://www.youtube.com/embed/g4St8hx08S8" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="col-md-6"  style="margin-top: 50px;">
+          <iframe width="100%" height="215" src="http://www.youtube.com/embed/ZB9l5cVbGek" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+
+    </div>
+    <div class="col-md-3 sidebar">
+      <h2 class="about_h2">
+        About Us
+      </h2>
+      <p class="about_p">
+        AboutUs.org started out as a wiki Internet domain directory. It listed websites along with information about their content. As a wiki, AboutUs allows Internet users to add entries or modify information. AboutUs.org has since become a wiki for more than just websites. The site now allows pages to be created for people, places, and almost anything else
+      <p>
+      <h2 class="about_h2">
+        Contact Now
+      </h2>
+      <p class="about_p">
+        <strong>Midwest Operations</strong><br/>
+        <i>395 S. Glen Ellyn Road</i><br/>
+        <i>Bloomingdale, IL 60108</i><br/>
+        <i>Telephone: 888-669-3663</i><br/>
+        <br/>
+        <%= mail_to "me@domain.com", image_tag("e-mail icon.jpg", :size=>"100x100" )%>
+         <p>
+      <h2 class="about_h2">
+        Our Products
+      </h2>
+      <p class="about_p">
+        <%= link_to 'Content Management' ,:class => 'product_link' %><br/>
+        <%= link_to 'Headend Systems Integrated ' ,:class => 'product_link' %><br/>
+        <%= link_to 'Receiver Decoders Mediaroom ' ,:class => 'product_link' %><br/>
+        <%= link_to 'Platforms Media Delivery Network ' ,:class => 'product_link' %><br/>
+        <%= link_to 'Platforms Modulators Multiscreen ' ,:class => 'product_link' %><br/>
+        <%= link_to 'Clients Multiscreen Core Platforms ' ,:class => 'product_link' %><br/>
+        <%= link_to 'Stream Processors Video ' ,:class => 'product_link' %><br/>
+        <%= link_to 'Processing Control  ' ,:class => 'product_link' %><br/>
+        <%= link_to 'Management Video Processors ' ,:class => 'product_link' %><br/>
+      <p>
+    </div>
+  </div>
+  </div>
+  </div>

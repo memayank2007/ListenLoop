@@ -1,0 +1,38 @@
+<h1>Listing feedbacks</h1>
+
+<%= link_to 'ADD New Feedback', new_feedback_path,:class=>"btn" %>
+
+<div class = "hero-unit">
+<table  >
+  <thead>
+    <tr>
+      <th>Employee</th>
+      <th>Client name</th>
+      <th>Message</th>
+      <th>Location</th>
+      <th>Logo</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @feedbacks.each do |feedback| %>
+      <tr>
+        <td><%= feedback.employee.email %></td>
+        <td><%= feedback.client_name %></td>
+        <td><%= feedback.message %></td>
+        <td><%= feedback.location %></td>
+        <td><%= feedback.logo_file_name %></td>
+        <td><%= link_to 'Show', feedback, :class=>"btn"%></td>
+        <td><%= link_to 'Edit', edit_feedback_path(feedback),:class=>"btn" %></td>
+        <td><%= link_to 'Destroy', feedback, method: :delete, data: { confirm: 'Are you sure?' } ,:class=>"btn"%></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+</div>
+

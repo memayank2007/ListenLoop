@@ -1,0 +1,146 @@
+
+/* presentation page css  */
+﻿.header_bar
+{
+  background: #698cb0;
+  margin-bottom:0;
+}
+.socialbar
+{
+  background:#fff;
+}
+.social ul
+{
+  border:1px solid #D4D0CD;
+  border-radius:5px;
+  height: 34px;
+  padding:0px;
+  background: none repeat scroll 0% 0% #F5F1EC;
+  float: left;
+}
+.social ul li
+{
+  float:left;
+  border-right:1px solid #D4D0CD;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size:15px;
+  list-style:none;
+}
+.social ul li a
+{
+  color:#555;
+  font-size:15px;
+  text-decoration:none;
+  font-family:lato;
+}
+.search-div
+{
+  float:right;
+}
+.search-button
+{
+  background: url(../images/search.png);
+  border: medium none;
+  width: 42px;
+  height: 31px;
+  margin-left: -6px;
+}
+.testi_h1
+{
+  font-family:Lobster;
+  font-size:23px !important;
+  color:#fff !important;
+  padding:10px;
+  text-align:center;
+  background:#1ab7de;
+  clear:both;
+}
+.people_img
+{
+  width:39%;
+  float:left;
+}
+.people_talk
+{
+  width:56%;
+  float:left;
+}
+
+.about_p
+{
+
+  padding: 8px 16px;
+  color:#616161;
+  font-size: 14px;
+  line-height: 21px;
+  font-family:voces;
+  background: none repeat scroll 0% 0% #E9F7FF;
+  margin: 5px;
+}
+.about_h2
+{
+
+  padding: 8px 16px;
+  color:#fff;
+  font-size: 15px;
+  font-family:voces;
+  font-style:italic;
+  font-weight: bold;
+  background:#b3ad9d;
+  border-radius: 10px;
+  background: none repeat scroll 0% 0% #67B2DC;
+}
+.sidebar
+{
+  background: none repeat scroll 0% 0% #fff;
+  margin-top: 19px;
+  padding:0;
+}
+.client_speak
+{
+  position: relative;
+  top: 35px;
+}
+
+.icon2{
+ float: right;
+  margin-right: 15px;
+}
+.people_talk h2{
+  text-align:right ;
+  font-size: 15px;
+}
+.bx-wrapper{
+  margin : 0px auto 20px !important;
+}
+
+ input[type="text"]
+{
+  height: 30px;
+  border: 1px solid #313131;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.8);
+  margin-bottom: 5px;
+  width: 261px;
+  padding-left: 10px;
+}
+  textarea
+ {
+   height: 176px;
+   border: 1px solid #313131;
+   border-radius: 10px;
+   background: rgba(255,255,255,0.8);
+   margin-bottom: 5px;
+   width: 489px;
+   padding-left: 10px;
+ }
+
+  thead{
+    background: none repeat scroll 0% 0% #67B2DC;
+    border-radius: 10px;
+  }
+
+  td{
+    padding :5px;
+  }

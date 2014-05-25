@@ -1,0 +1,23 @@
+<br/>
+<br/>
+<h1>All Employee</h1>
+<%= link_to 'ADD New Employee', new_employee_path,:class=>"btn" %>
+
+<div class = "hero-unit">
+  <table>
+    <thead><td><b>Email</b></td></thead>
+
+    <tbody>
+    <% @employees.each do |employee| %>
+        <tr>
+          <td><%= employee.email  %></td>
+          <td><%= link_to 'change Password', edit_employee_url(employee) ,:class=>"btn"%></td>
+          <td><%= link_to 'delete',:class=>"btn" %>
+        </tr>
+        </tbody>
+    <% end %>
+
+    </table>
+
+
+</div>

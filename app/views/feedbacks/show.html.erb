@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Employee:</strong>
+  <%= @feedback.employee.email %>
+</p>
+
+<p>
+  <strong>Client name:</strong>
+  <%= @feedback.client_name %>
+</p>
+
+<p>
+  <strong>Message:</strong>
+  <%= @feedback.message %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @feedback.location %>
+</p>
+
+<p>
+  <strong>Logo:</strong>
+  <%= image_tag @feedback.logo.url, :size => "100x100" %>
+</p>
+
+<%= link_to 'Edit', edit_feedback_path(@feedback) %> |
+<%= link_to 'Back', feedbacks_path %>

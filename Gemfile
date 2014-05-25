@@ -15,8 +15,23 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
 
+#twitter bootstrap
+gem 'twitter-bootstrap-rails'
+gem "less-rails"
+
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
+gem 'therubyracer', platforms: :ruby
+
+#devise for sing-in/sign-up
+gem 'devise', '3.0.0.rc'
+
+#paperclip for uploading image
+
+gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
+gem 'bxslider-rails'
+gem "jquery-ui-rails"
+
+gem 'jquery-turbolinks'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

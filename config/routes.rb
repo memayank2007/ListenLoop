@@ -1,9 +1,27 @@
 ListenLoop::Application.routes.draw do
+
+
+  resources :presentations
+
+  get 'my_presentations' => 'presentations#my_presentation'
+
+
+  resources :feedbacks
+
+  devise_for :employees,controllers: {sessions: "sessions"}
+  devise_scope :employee do
+    root to: "devise/sessions#new"
+  end
+
+  get '/dashboard' => 'employees#dashboard'
+
+  resources :employees
+  get '/home'=> 'pages#home'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+   #root 'pages#home'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

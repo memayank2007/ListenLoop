@@ -13,4 +13,16 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require jquery.turbolinks
+//= require bxslider
 //= require_tree .
+
+
+
+$(document).ready(function(){
+    $('.bxslider').bxSlider({
+        pagerCustom: '#bx-pager'
+
+    });
+
+});

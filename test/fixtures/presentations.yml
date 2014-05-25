@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  employer_id: 1
+  publish: false
+
+two:
+  title: MyString
+  employer_id: 1
+  publish: false

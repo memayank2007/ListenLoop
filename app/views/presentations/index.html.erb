@@ -1,0 +1,32 @@
+<h1>All presentations</h1>
+<%= link_to 'New Presentation', new_presentation_path,:class=>"btn" %>
+<div class = "hero-unit">
+  <table>
+    <thead>
+    <tr>
+      <th>Title</th>
+      <th>Employer</th>
+      <th>Publish</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <% @presentations.each do |presentation| %>
+        <tr>
+          <td><%= presentation.title %></td>
+          <td><%= presentation.employee.email %></td>
+          <td><%= presentation.publish %></td>
+          <td><%= link_to 'Show', presentation ,:class=>"btn"%></td>
+          <td><%= link_to 'Edit', edit_presentation_path(presentation),:class=>"btn" %></td>
+          <td><%= link_to 'Destroy', presentation, method: :delete, data: { confirm: 'Are you sure?' },:class=>"btn" %></td>
+        </tr>
+    <% end %>
+    </tbody>
+  </table>
+
+  <br>
+</div>
+
